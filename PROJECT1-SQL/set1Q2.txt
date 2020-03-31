@@ -1,0 +1,20 @@
+/* Udacity 1st project: Investigate a Relational Database */
+
+/* Question Set # 1 */
+
+/* 
+Question 2: Now we need to know how the length of rental duration of these family-friendly movies compares to the duration that all movies are rented for. Can you provide a table with the movie titles and divide them into 4 levels (first_quarter, second_quarter, third_quarter, and final_quarter) based on the quartiles (25%, 50%, 75%) of the rental duration for movies across all categories? Make sure to also indicate the category that these family-friendly movies fall into.
+Answer: we should be compared to another subset of data (duration that all movies are rented for). 
+*/
+
+SELECT *,
+NTILE(4) OVER(ORDER BY t1.rental_duration) AS standard_quartile
+FROM (SELECT f.title,
+             c.name,
+             f.rental_duration
+     FROM category AS c
+      JOIN film_category AS fc
+      ON c.category_id=fc.category_id
+      JOIN film AS f
+      ON f.film_id=fc.film_id
+      ORDER BY 2,1)t1;
