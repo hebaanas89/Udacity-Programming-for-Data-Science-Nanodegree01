@@ -8,7 +8,8 @@ CITY_DATA = {'chicago': 'chicago.csv',
              'new york city': 'new_york_city.csv',
              'washington': 'washington.csv'}
 
-print('this program developed to allow user to explore an US bikeshare system database to retrieve information from database')
+print('this program developed to allow user to explore an US bikeshare system database to retrieve information from database ')
+Print('lets go')
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -32,7 +33,7 @@ def get_filters():
     while True:
         month = input('Specify the month of data to explore. All, January ' +
                       'February, March, April, May, or June?\n')
-        if month.lower() in ['All', 'january', 'february', 'march',
+        if month.lower() in ['all', 'january', 'february', 'march',
                              'april', 'may', 'june']:
             break
 
