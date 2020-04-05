@@ -8,7 +8,9 @@ CITY_DATA = {'chicago': 'chicago.csv',
              'new york city': 'new_york_city.csv',
              'washington': 'washington.csv'}
 
-print('this program developed to allow user to explore an US bikeshare system database
+print('this program developed to allow user to explore an US bikeshare system database to retrieve information from database ')
+Print('lets go')
+Print('are you ready')
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -76,7 +78,7 @@ def load_data(city, month, day):
     # filter by month
     if month != 'all':
         # use the index of the months list
-        months = ['january', 'february', 'march', 'april', 'may', 'june']
+        months = ['January', 'February', 'March', 'April', 'May', 'June']
         month = months.index(month) + 1
 
         # filter by month to create the new dataframe
@@ -174,6 +176,7 @@ def user_stats(df):
         print('Earliest: {}\nLatest: {}\nMost Common: {}'
               .format(df['Birth Year'].min(), df['Birth Year'].max(),
                       df['Birth Year'].mode()[0]))
+                      Print('this is a program allow the user to explore an US bikeshare system database and retrieve information from the database')
     except:
         print('Data does not include date of birth')
 
